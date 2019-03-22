@@ -1,7 +1,7 @@
 # enterovirus-NF
 Nextflow pipeline for _de novo_ assembly of enterovirus genomes 
 
-Usage:
+### Usage:
 
 ```
 nextflow run enterovirus.nf --inputfq 'reads/*_R{1,2}_001.fastq.gz' -profile ( slurm | local )
@@ -21,7 +21,7 @@ nextflow run enterovirus.nf --inputfq 'reads/*_R{1,2}_001.fastq.gz' -profile ( s
 	--bbnorm_target [Kmer normalization target for bbnorm, 500 by default]
 ```
 
-Outputs:
+### Outputs:
 
 | Filename | File content |
 | :--- | :--- |
@@ -33,8 +33,8 @@ Outputs:
 |assembly/{SAMPLENAME}.iva.fa | Sample assembly |
 
 
-Depends:
-	- Nextflow (https://www.nextflow.io/)
-	- Conda (Install miniconda: https://docs.conda.io/en/latest/miniconda.html)
-	- Conda channels bioconda and conda-forge (https://bioconda.github.io/#set-up-channels)
-	- VAPOR (https://github.com/connor-lab/vapor) 
+### Depends:
+* Nextflow (https://www.nextflow.io/)
+* Conda (Install miniconda: https://docs.conda.io/en/latest/miniconda.html)
+* Conda channels bioconda and conda-forge (https://bioconda.github.io/#set-up-channels)
+* VAPOR (https://github.com/connor-lab/vapor) 
