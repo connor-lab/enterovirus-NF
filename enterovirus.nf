@@ -17,6 +17,8 @@ process VAPOR {
 
     publishDir "${params.output}/vapor", pattern: "*.ref.{out,fa}", mode: 'copy'
 
+    conda 'numpy'
+ 
     memory { 16.GB * task.attempt }
 
     errorStrategy 'retry'
@@ -33,6 +35,7 @@ process VAPOR {
 
     script:
     """
+    pip install git+https://github.com/m-bull/vapor
     vapor.py -o ${dataset_id}.ref -fa $ref -fq $fwd
     """
 }

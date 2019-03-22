@@ -6,7 +6,7 @@ Nextflow pipeline for _de novo_ assembly of enterovirus genomes
 ```
 nextflow run enterovirus.nf --inputfq 'reads/*_R{1,2}_001.fastq.gz' -profile ( slurm | local )
 
-	REQUIRED
+    REQUIRED
 
 	--inputfq [Fileglob that matches your input reads, must be surrounded with 
                     'single-quotes' prevent shell expansion]
@@ -14,7 +14,7 @@ nextflow run enterovirus.nf --inputfq 'reads/*_R{1,2}_001.fastq.gz' -profile ( s
 	-profile [If you are running this on a SLURM cluster, set to 'slurm' to submit jobs to 
 	          the scheduler. If not, set 'local']
 
-	OPTIONAL
+    OPTIONAL
 
 	--output [Path to output directory, 'enterovirus-NF.out' by default]
 
@@ -37,4 +37,3 @@ nextflow run enterovirus.nf --inputfq 'reads/*_R{1,2}_001.fastq.gz' -profile ( s
 * Nextflow (https://www.nextflow.io/)
 * Conda (Install miniconda: https://docs.conda.io/en/latest/miniconda.html)
 * Conda channels bioconda and conda-forge (https://bioconda.github.io/#set-up-channels)
-* VAPOR (https://github.com/connor-lab/vapor) 
