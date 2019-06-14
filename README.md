@@ -18,19 +18,21 @@ nextflow run enterovirus.nf --inputfq 'reads/*_R{1,2}_001.fastq.gz' -profile ( s
 
 	--output [Path to output directory, 'enterovirus-NF.out' by default]
 
-	--bbnorm_target [Kmer normalization target for bbnorm, 500 by default]
+	--bbnorm_target [Kmer normalization target for bbnorm, 5000 by default]
 ```
 
 ### Outputs:
 
 | Filename | File content |
 | :--- | :--- |
-|vapor/{SAMPLENAME}.ref.out | VAPOR statistics |
-|vapor/{SAMPLENAME}.ref.fa | VAPOR selected reference sequence |
+|vapor/{SAMPLENAME}.ref.out | [VAPOR](https://github.com/connor-lab/vapor) statistics |
+|vapor/{SAMPLENAME}.ref.fa | [VAPOR](https://github.com/connor-lab/vapor) selected reference sequence |
 |mapping/{SAMPLENAME}.assembly_mapping.sorted.bam | Reads mapped to sample assembly |
 |mapping/{SAMPLENAME}.reference_mapping.sorted.bam | Reads mapped to reference sequence |
 |mapping/{SAMPLENAME}.assembly_mapping.normalized.sorted.bam | Normalized reads mapped to assembly |
 |assembly/{SAMPLENAME}.iva.fa | Sample assembly |
+|assembly/{SAMPLENAME}.shiver.fa | Sample assembly post-processed with [Shiver](https://github.com/ChrisHIV/shiver) |
+
 
 
 ### Depends:
